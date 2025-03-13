@@ -11,21 +11,24 @@ function AddStudent() {
     const [grade, setGrade] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');  
-    const [successMessage, setSuccessMessage] = useState(''); 
+    const [successMessage, setSuccessMessage] = useState('');  
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        
         if (!roll || !username || !grade || !password) {
             setError('All fields are required!');
             return;
         }
 
+        
         axios.post('http://localhost:3001/student/register', { roll, username, grade, password })
             .then(res => {
                 console.log(res);  
                 setSuccessMessage('Student registered successfully!');
                 setError(''); 
+                
                 setRoll('');
                 setUsername('');
                 setGrade('');

@@ -4,9 +4,10 @@
     justify-content: space-between;
     align-items: center;
     background-color: #f9f9f9;
-    padding: 50px;
-    margin-top: 20px;
+    padding: 30px;
+    margin-top: 2px;
     border-radius: 10px;
+    height:100vh;
   }
   
   .hero-content {
@@ -28,10 +29,10 @@
   
   .hero-image {
     flex: 1;
-    background-image: url('images/home.webp'); /* Replace with your image URL */
+    background-image: url('images/home.webp'); 
     background-size: cover;
     background-position: center;
-    height: 300px;
+    height: 500px;
     border-radius: 10px;
   }
   

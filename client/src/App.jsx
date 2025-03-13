@@ -3,6 +3,8 @@ import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Books from './components/Books'
 import Login from './components/Login'
+import Dashboard from './components/Dashboard'
+import AddStudent from './components/AddStudent'
 function App() {
   
 
@@ -13,6 +15,8 @@ function App() {
       <Route path = '/' element ={<Home/>}></Route>
       <Route path = '/books' element ={<Books/>}></Route>
       <Route path = '/login' element ={<Login/>}></Route>
+      <Route path = '/dashboard' element={<Dashboard/>}></Route>
+      <Route path = '/addstudent' element={<AddStudent/>}></Route>
     </Routes>
   </BrowserRouter>
   )

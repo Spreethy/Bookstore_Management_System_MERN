@@ -1,13 +1,11 @@
-/* General styling for the student form page */
 .student-form-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
 }
 
-/* Styling for the student form container */
 .student-form {
     background: white;
     padding: 2rem;
@@ -18,14 +16,12 @@
     font-family: Arial, sans-serif;
 }
 
-/* Heading Styling */
 .student-form h2 {
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
     color: #444;
 }
 
-/* Styling for form groups */
 .form-group {
     margin-bottom: 1.5rem;
     text-align: left;
@@ -49,12 +45,10 @@ input {
     transition: border-color 0.3s;
 }
 
-/* Focus styling for inputs */
 input:focus {
     border-color: #007bff;
 }
 
-/* Styling for the submit button */
 button[type="submit"] {
     width: 100%;
     padding: 12px;
@@ -72,9 +66,8 @@ button[type="submit"]:hover {
     transform: scale(1.05);
 }
 
-/* Optional additional styling for error or success messages */
 .message {
     font-size: 0.9rem;
-    color: #d9534f; /* Red for errors */
+    color: #d9534f; 
     margin-top: 10px;
 }
