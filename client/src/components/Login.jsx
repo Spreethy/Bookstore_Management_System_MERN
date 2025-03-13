@@ -35,8 +35,4 @@ function Login() {
   )
 }
 
-<<<<<<< HEAD
 export default Login
-=======
-export default Login
->>>>>>> c4eda6e (Updated Login page and add CSS)
