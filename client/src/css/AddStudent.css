@@ -2,29 +2,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     background: linear-gradient(135deg, #f8f9fa, #e9ecef);
 }
 
 .student-form {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 320px;
+    width: 280px;
     font-family: Arial, sans-serif;
 }
 
 .student-form h2 {
-    font-size: 1.6rem;
+    font-size: 1.3em;
     margin-bottom: 1.5rem;
     color: #444;
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.0rem;
     text-align: left;
+    font-size: 0.8rem;
 }
 
 label {
@@ -35,7 +36,7 @@ label {
 }
 
 input {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -56,7 +57,7 @@ button[type="submit"] {
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
 }

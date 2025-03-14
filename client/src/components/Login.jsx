@@ -3,7 +3,7 @@ import '../css/Login.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-function Login() {
+const Login = ({setRoleVar}) => {
   const [username, setUsername] = useState('') 
   const [password, setPassword] = useState('')  
   const [role, setRole] = useState('admin')  
@@ -16,11 +16,16 @@ function Login() {
       .then(res => {
         console.log(res.data);
         if (res.data.login && res.data.role === 'admin') {
+          setRoleVar('admin')
           navigate('/dashboard')  
-        } else {
-
-          alert('Login failed. Please check your credentials.')
+        } else if(res.data.login && res.data.role === 'student'){
+          setRoleVar('student')
+          navigate('/') 
         }
+
+
+         
+        
       })
       .catch(err => {
         console.error('Login error:', err)

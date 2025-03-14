@@ -4,6 +4,7 @@
 import React, { useState } from 'react';  
 import '../css/AddStudent.css';
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom'
 
 function AddStudent() {
     const [username, setUsername] = useState('');
@@ -11,18 +12,18 @@ function AddStudent() {
     const [grade, setGrade] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');  
-    const [successMessage, setSuccessMessage] = useState('');  
+    const [successMessage, setSuccessMessage] = useState(''); 
+    const navigate = useNavigate() 
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        
+    
         if (!roll || !username || !grade || !password) {
             setError('All fields are required!');
             return;
         }
-
-        
+    
         axios.post('http://localhost:3001/student/register', { roll, username, grade, password })
             .then(res => {
                 console.log(res);  
@@ -33,13 +34,22 @@ function AddStudent() {
                 setUsername('');
                 setGrade('');
                 setPassword('');
+    
+                navigate('/dashboard');
             })
             .catch(err => {
-                console.log(err);  
-                setError('Error in registering student');
-                setSuccessMessage(''); 
+                console.log(err);
+    
+                if (err.response && err.response.status === 400) {
+                    setError('Student is already registered.');
+                } else {
+                    setError('Error in registering student');
+                }
+    
+                setSuccessMessage('');
             });
     };
+    
 
     return (
         <div className="student-form-container">
@@ -53,6 +63,7 @@ function AddStudent() {
                     <label htmlFor="roll">Roll No:</label>
                     <input
                         type="text"
+                        placeholder="Enter roll no"
                         id="roll"
                         name="roll"
                         value={roll}
@@ -64,6 +75,7 @@ function AddStudent() {
                     <label htmlFor="username">Username:</label>
                     <input
                         type="text"
+                        placeholder="Enter Username"
                         id="username"
                         name="username"
                         value={username}
@@ -75,6 +87,7 @@ function AddStudent() {
                     <label htmlFor="grade">Grade:</label>
                     <input
                         type="text"
+                        placeholder="Enter grade"
                         id="grade"
                         name="grade"
                         value={grade}
@@ -86,6 +99,7 @@ function AddStudent() {
                     <label htmlFor="password">Password:</label>
                     <input
                         type="password"
+                        placeholder="Enter Password"
                         id="password"
                         name="password"
                         value={password}
