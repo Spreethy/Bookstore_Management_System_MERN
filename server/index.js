@@ -5,6 +5,14 @@ import cookieParser from "cookie-parser";
 import mongoose from "mongoose";
 import { AdminRouter } from "./routes/auth.js";
 import {studentRouter} from './routes/student.js'
+import { bookRouter } from './routes/book.js';
+import { adminModel } from './models/Admin.js';  
+import { studentModel } from './models/Student.js';
+import { bookModel } from './models/Book.js';  
+
+
+
+
 
 const app = express();
 
@@ -19,6 +27,18 @@ dotenv.config();
 
 app.use('/auth', AdminRouter);
 app.use('/student', studentRouter)
+app.use('/book', bookRouter)
+
+app.get('/dashboard', async (req,res) => {
+    try{
+        const student= await student.countDocuments()
+        const admin = await admin.countDocuments()
+        const book= await book.countDocuments()
+        return res.json({ok: true, student,book,admin})
+    }catch(err){
+        return res.json(err)
+    }
+})
 
 const Connection = async () => {
     try {
