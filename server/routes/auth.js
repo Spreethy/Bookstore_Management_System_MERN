@@ -1,5 +1,5 @@
 import express from 'express'
-import { adminModel } from './models/Admin.js';
+import { adminModel } from '../models/Admin.js';
 import {studentModel} from '../models/Student.js';
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcrypt'

@@ -18,7 +18,7 @@ const Navbar = ({role}) => {
             }
             {role === "" ?
             <Link to = "/login" className='navbar-link'>Login</Link>
-             : <Link to = "/" className='navbar-link'>Logout</Link>
+             : <Link to = "/logout" className='navbar-link'>Logout</Link>
             
             }
 
