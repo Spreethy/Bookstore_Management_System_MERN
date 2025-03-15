@@ -66,3 +66,19 @@
     text-decoration: none;
     color: rgb(235, 235, 235);
 }
+
+
+.search-bar {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: 16px;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid #3508c9;
+  border-radius: 4px;
+}
