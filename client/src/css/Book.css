@@ -39,6 +39,8 @@
   
   .book-card img {
     max-width: 100%;
+    width:280px;
+    height:350px;
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -46,20 +48,21 @@
   
   .book-card button {
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #16880a;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1.5rem;
     transition: background-color 0.3s;
-  }
-  
-  .book-card button:hover {
-    background-color: #1676e3;
-  }
-  
-  .book-card .btn-link{
+    margin-right: 10px; /* Add space between buttons */
+}
+
+.book-card button:hover {
+    background-color: #07cd46;
+}
+
+.book-card .btn-link {
     text-decoration: none;
     color: rgb(235, 235, 235);
-  }
+}

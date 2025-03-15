@@ -31,16 +31,16 @@ const Books = ({ role }) => {
   return (
     <div className="book-list">
       {Array.isArray(books) && books.length > 0 ? (
-        books.map(book => (
-          <BookCard key = {book.id} book = {book}></BookCard>
- 
-  
+        books.map((book) => (
+          <BookCard key={book._id} book={book} role={role} />
         ))
       ) : (
-        <p>No books available</p>  
+        <p>No books available</p>
       )}
     </div>
   );
+  
+  
 };
 
 export default Books;

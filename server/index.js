@@ -31,9 +31,9 @@ app.use('/book', bookRouter)
 
 app.get('/dashboard', async (req,res) => {
     try{
-        const student= await student.countDocuments()
-        const admin = await admin.countDocuments()
-        const book= await book.countDocuments()
+        const student= await studentModel.countDocuments()
+        const admin = await adminModel.countDocuments()
+        const book= await bookModel.countDocuments()
         return res.json({ok: true, student,book,admin})
     }catch(err){
         return res.json(err)

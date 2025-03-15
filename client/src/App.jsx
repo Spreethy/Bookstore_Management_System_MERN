@@ -41,8 +41,8 @@ function App() {
       <Route path = '/addstudent' element={<AddStudent/>}></Route>
       <Route path = '/logout' element={<Logout setRole = {setRole}/>}></Route>
       <Route path = '/addbook' element = {<AddBook/>}></Route>
-      <Route path = '/book/:id' element = {<EditBook/>}></Route>
-      <Route path = '/delete/:id' element = {<DeleteBook/>}></Route>
+      <Route path = '/book/:id' element = {<EditBook role={role}/>}></Route>
+      <Route path = '/delete/:id' element = {<DeleteBook role={role}/>}></Route>
 
     </Routes>
   </BrowserRouter>
